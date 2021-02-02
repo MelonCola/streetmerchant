@@ -17,7 +17,7 @@ interface LinksBuilderOptions {
 const isPartialUrlRegExp = /^\/[^/]/i;
 
 export function getProductLinksBuilder(options: LinksBuilderOptions) {
-  return (docElement: cheerio.Cheerio, series: Series): Link[] => {
+  return (docElement: any, series: Series): Link[] => {
     const productElements = docElement.find(options.productsSelector);
     const links: Link[] = [];
     for (let i = 0; i < productElements.length; i++) {
