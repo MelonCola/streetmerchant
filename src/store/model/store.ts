@@ -214,7 +214,7 @@ export type Store = {
   disableAdBlocker?: boolean;
   links: Link[];
   linksBuilder?: {
-    builder: (docElement: cheerio.Cheerio, series: Series) => Link[];
+    builder: (docElement: any, series: Series) => Link[];
     ttl?: number;
     urls: Array<{series: Series; url: string | string[]}>;
   };
